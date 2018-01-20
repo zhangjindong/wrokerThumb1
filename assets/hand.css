@@ -1,0 +1,96 @@
+ .palm.bgcolor .finger {
+     color: darkgrey;
+ }
+ 
+ .palm.bgcolor {
+     background-color: darkgrey;
+ }
+ 
+ .palm {
+     /* color: tan; */
+     top: 300px;
+     left: 300px;
+     position: relative;
+     width: 150px;
+     height: 200px;
+     background-color: tan;
+     border-radius: 30px 0px 0px 30px;
+     box-shadow: 0px 0px 1px black;
+     z-index: 100;
+     cursor: pointer;
+ }
+ /* 文字 */
+ 
+ .palm::after {
+     content: attr(title);
+     left: 100%;
+     top: -30%;
+     margin-top: -20px;
+     position: absolute;
+     color: pink;
+     text-shadow: 0px 0px 10px #ffffff;
+     font-size: 30px;
+     display: none;
+ }
+ /* 四个小指头 */
+ 
+ .palm .finger {
+     color: tan;
+     /* top: 50px; */
+     background-color: currentColor;
+     height: 50px;
+     width: 50px;
+     left: 149px;
+     border-radius: 0px 30px 30px 0px;
+     position: relative;
+     box-shadow: 2px 0px 1px black, 0px 50px 0px currentColor, 10px 50px 0px currentColor, 12px 50px 1px black, -10px 100px 0px currentColor, 0px 100px 0px currentColor, 2px 100px 1px black, -10px 150px 0px currentColor, -8px 150px 1px black;
+ }
+ /* 手臂 */
+ 
+ .palm .finger::after {
+     top: 35px;
+     left: -240px;
+     position: absolute;
+     background-color: currentColor;
+     height: 135px;
+     width: 100px;
+     box-shadow: -1px -1px 0px black;
+     z-index: 3;
+     content: "";
+ }
+ /* 大拇指 */
+ 
+ .palm .finger::before {
+     top: -42px;
+     left: -112px;
+     position: absolute;
+     background-color: currentColor;
+     height: 60px;
+     width: 70px;
+     border-radius: 0px 30px 30px 0px;
+     z-index: 2;
+     content: "";
+     transform: rotate(-45deg);
+     box-shadow: 2px 0px 1px black, -30px 0px 0px currentColor, -29px -1px 0px black;
+ }
+ 
+ body {
+     background-color: darkseagreen;
+ }
+ 
+ .addOne::after {
+     display: block;
+     -webkit-animation: animate 1.5s infinite;
+     animation: animate 1s infinite;
+ }
+ 
+ @keyframes animate {
+     from {
+         top: -30%;
+         opacity: 0.5;
+     }
+     to {
+         top: -35%;
+         opacity: 1;
+     }
+ }
