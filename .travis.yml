@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "iojs"
+  - "8"
+sudo: required
+install:
+   - sudo yum install yarn
+   - yarn install
+script : true
+
